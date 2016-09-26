@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+
+  .column {
+    display: flex;
+    flex-flow: column;
+
+    padding: 1.5em;
+    background: #eee;
+    > h1 {
+      font-family: sans-serif;
+      color: #999;
+      height: 1em;
+    }
+  }
+  .col-left {
+    flex: 1;
+    textarea {
+      width: 100%;
+      flex:1;
+    }
+
+    .side-footer {
+      height: 2em;
+      margin-top: 1em;
+    }
+
+    button {
+      width: 100%;
+      height: 2em;
+    }
+  }
+
+  .col-right {
+    flex: 2;
+    border-left: 1px solid #bbb;
+    .preview {
+      flex: 1;
+      background: white;
+      border: 1px solid #bbb;
+      padding: .5em;
+      width: 100%;
+      overflow: auto;
+    }
+  }
+}
+
+
+
+#preview_content {
+  th {
+    border:1px solid #ddd;
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MailPoet Task 3 - Email Renderer</title>
+
+  <link href="css/style.css" rel="stylesheet">
+  <link href="foundation/css/foundation-emails.css" rel="stylesheet">
+  <style>
+    .error{
+      text-align: center;
+      color:firebrick;
+    }
+  </style>
+</head>
+<body>
+
+<div class="main-container">
+  <div class="column col-left">
+    <h1>JSON</h1>
+    <textarea title="paste your JSON here" id="fld_json">{
+  "rows": [
+    {
+      "columns": [
+        {
+          "type": "image",
+          "image_url": "https://unsplash.it/300/150"
+        },
+        {
+          "type": "image",
+          "image_url": "https://unsplash.it/300/150"
+        }
+      ]
+    },
+    {
+      "columns": [
+        {
+          "type": "text",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet rhoncus ex, in imperdiet justo. Nullam massa ante, convallis vel ante nec, ultrices accumsan massa. Maecenas id dictum quam. Nulla lacinia dui quis ligula auctor consectetur. Maecenas a sollicitudin neque, at gravida nisl. Morbi egestas nunc vel dolor dapibus aliquet. Aenean condimentum leo felis, vitae aliquet eros commodo a. Aenean accumsan hendrerit nisi vel tempus. Aenean nec lacinia tortor, in ultricies lorem. Vivamus tristique tincidunt rhoncus. Maecenas bibendum mauris velit, sed mattis magna volutpat vel."
+        }
+      ]
+    },
+    {
+      "columns": [
+        {
+          "type": "text",
+          "text": "Left<br>column text"
+        },
+        {
+          "type": "text",
+          "text": "Middle<br>column text"
+        },
+        {
+          "type": "text",
+          "text": "Right<br>column text"
+        }
+      ]
+    }
+  ]
+}</textarea>
+    <div class="side-footer">
+      <button type="button" id="btn_render">Render</button>
+    </div>
+  </div>
+  <div class="column col-right">
+    <h1>Rendered HTML</h1>
+    <div class="preview">
+
+      <table class="container" data-made-with-foundation>
+        <tr>
+          <td class="float-center" align="center" valign="top">
+            <center id="preview_content">
+            </center>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+<script src="js/Renderer.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    init();
+  });
+
+  function init () {
+    document.getElementById('btn_render').addEventListener('click', function () {
+      var jsonText = document.getElementById('fld_json').value;
+      try {
+        var r = new Renderer(jsonText);
+        document.getElementById('preview_content').innerHTML = r.render();
+      } catch (e) {
+        console.log(e);
+        document.getElementById('preview_content').innerHTML = '<div class="error">' + e + '</div>';
+      }
+    });
+  }
+</script>
+</body>
+</html>

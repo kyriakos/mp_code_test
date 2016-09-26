@@ -1,0 +1,40 @@
+{
+  "rows": [
+    {
+      "columns": [
+        {
+          "type": "image",
+          "image_url": "https://unsplash.it/300/150"
+        },
+        {
+          "type": "image",
+          "image_url": "https://unsplash.it/300/150"
+        }
+      ]
+    },
+    {
+      "columns": [
+        {
+          "type": "text",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet rhoncus ex, in imperdiet justo. Nullam massa ante, convallis vel ante nec, ultrices accumsan massa. Maecenas id dictum quam. Nulla lacinia dui quis ligula auctor consectetur. Maecenas a sollicitudin neque, at gravida nisl. Morbi egestas nunc vel dolor dapibus aliquet. Aenean condimentum leo felis, vitae aliquet eros commodo a. Aenean accumsan hendrerit nisi vel tempus. Aenean nec lacinia tortor, in ultricies lorem. Vivamus tristique tincidunt rhoncus. Maecenas bibendum mauris velit, sed mattis magna volutpat vel."
+        }
+      ]
+    },
+    {
+      "columns": [
+        {
+          "type": "text",
+          "text": "Left<br>column text"
+        },
+        {
+          "type": "text",
+          "text": "Middle<br>column text"
+        },
+        {
+          "type": "text",
+          "text": "Right<br>column text"
+        }
+      ]
+    }
+  ]
+}

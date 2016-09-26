@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "columns": [
+        {
+          "type": "image",
+          "image_url": "https://unsplash.it/200"
+        },
+        {
+          "type": "text",
+          "text": "Hello World"
+        }
+      ]
+    },
+    {
+      "columns": [
+        {
+          "type": "text",
+          "text": "Left column text"
+        },
+        {
+          "type": "text",
+          "text": "Right column text"
+        }
+      ]
+    },
+    {
+      "columns": [
+        {
+          "type": "image",
+          "image_url": "https://unsplash.it/200"
+        },
+        {
+          "type": "text",
+          "text": "Right column text"
+        },
+        {
+          "type": "image",
+          "image_url": "https://unsplash.it/200"
+        }
+      ]
+    }
+  ]
+}
